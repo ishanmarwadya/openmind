@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -246,7 +246,7 @@ const Store=(()=>{let mem={};
 const S = Store.get('om_v3',null) || {
   name:'Aarav', streak:4, childWords:0, sysWords:0, questionsAsked:0, recordings:0,
   skills:{Reasoning:38,Expression:31,Curiosity:44,Numbers:35,Focus:29,Empathy:41},
-  done:[], revision:[], mood:null, lessons:[], lang:'en', online:false, theme:'dark',
+  done:[], revision:[], mood:null, lessons:[], lang:'en', online:false, theme:'light',
   tts:true, secs:20*60, over:false
 };
 function save(){Store.set('om_v3',S);}
