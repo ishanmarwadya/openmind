@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>OpenMind · Learning that listens, looks and asks back</title>
+  <meta name="description" content="OpenMind prototype: Vivi, a Socratic AI learning buddy for Indian children, with a full parent app.">
+  <meta name="theme-color" content="#6A54C0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // apply saved theme before paint, so dark mode never flashes white
+    try { const u = (JSON.parse(localStorage.getItem('openmind.v1') || '{}').ui) || {};
+      const t = u.theme === 'dark' || (u.theme === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+      document.documentElement.dataset.theme = t; } catch (e) { }
+  </script>
+</head>
+<body data-area="start">
+  <header id="gbar" class="gbar"></header>
+  <div id="frame" class="frame"><div id="app"></div></div>
+  <noscript>OpenMind needs JavaScript turned on.</noscript>
+  <script src="js/content.js"></script>
+  <script src="js/vivi.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/games.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
